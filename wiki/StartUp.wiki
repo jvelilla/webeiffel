@@ -8,7 +8,6 @@ Site [http://sourceforge.net/projects/goanna]
 
   == Dependencies==
    * GOBO * : _download_ GOBO Eiffel3.5 from [http://www.gobosoft.com/eiffel/gobo/download.html]
-     
    * EPOSIX *
    * LOG4E * 
    

@@ -1,0 +1,15 @@
+= Introduction to Goanna Framework=
+
+Site [http://sourceforge.net/projects/goanna] 
+
+= Envairoment =
+*Eiffel Compiler* _Eiffel57_ [http://eiffelsoftware.origo.ethz.ch/index.php/Main_Page]
+
+*Install Goanna*  _Origo Page_ [http://origo.ethz.ch/index.php/Goanna_and_Eposix_setup]   
+
+*Envairoment Variables* [TODO]
+
+
+
+
+

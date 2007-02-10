@@ -1,12 +1,12 @@
-= Introduction to Goanna Framework (Draft)=
+=Introduction to Goanna Framework (Draft)=
 
 Site [http://sourceforge.net/projects/goanna] 
 
-=Envairoment=
+==Envairoment==
 *Eiffel Compiler* _Eiffel_ [http://eiffelsoftware.origo.ethz.ch/index.php/Main_Page]
 (ISE EiffelOnly)
 
-  ==Dependencies==
+  ===Dependencies===
    * GOBO*  [http://www.gobosoft.com/eiffel/gobo/download.html]
    * EPOSIX* _see Other sources_
    * LOG4E*  _see Other sources_
@@ -21,6 +21,5 @@ Site [http://sourceforge.net/projects/goanna]
 
 
 *Envairoment Variables*
-
 
 

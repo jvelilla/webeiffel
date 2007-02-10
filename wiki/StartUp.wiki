@@ -3,11 +3,28 @@
 Site [http://sourceforge.net/projects/goanna] 
 
 = Envairoment =
-*Eiffel Compiler* _Eiffel57_ [http://eiffelsoftware.origo.ethz.ch/index.php/Main_Page]
+*Eiffel Compiler* _Eiffel_ [http://eiffelsoftware.origo.ethz.ch/index.php/Main_Page]
+(ISE EiffelOnly)
 
-*Install Goanna*  _Origo Page_ [http://origo.ethz.ch/index.php/Goanna_and_Eposix_setup]   
+  == Dependencies==
+   * GOBO * : _download_ GOBO Eiffel3.5 from [http://www.gobosoft.com/eiffel/gobo/download.html]
+     
+   * EPOSIX *
+   * LOG4E * 
+   
+   Other sources: [http://origo.ethz.ch/index.php/Goanna_and_Eposix_setup]
 
-*Envairoment Variables* [TODO]
+
+*Install FastCgi* 
+
+*Configure Apache*
+   
+
+
+*Envairoment Variables*
+
+
+
 
 
 

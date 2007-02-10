@@ -10,7 +10,7 @@ Site [http://sourceforge.net/projects/goanna]
    * GOBO*  [http://www.gobosoft.com/eiffel/gobo/download.html]
    * EPOSIX* _see Other sources_
    * LOG4E*  _see Other sources_
-    Other sources: [http://origo.ethz.ch/index.php/Goanna_and_Eposix_setup]
+    Other sources [http://origo.ethz.ch/index.php/Goanna_and_Eposix_setup]
 
 
 *Install FastCgi* 
@@ -20,7 +20,6 @@ Site [http://sourceforge.net/projects/goanna]
 
 
 *Envairoment Variables*
-
 
 
 

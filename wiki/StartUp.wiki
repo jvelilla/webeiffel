@@ -7,9 +7,9 @@ Site [http://sourceforge.net/projects/goanna]
 (ISE EiffelOnly)
 
   ==Dependencies==
-   * GOBO*  [http://www.gobosoft.com/eiffel/gobo/download.html]
-   * EPOSIX* _see Other sources_
-   * LOG4E*  _see Other sources_
+   *GOBO*  [http://www.gobosoft.com/eiffel/gobo/download.html]
+   *EPOSIX* _see Other sources_
+   *LOG4E*  _see Other sources_
     Other sources [http://origo.ethz.ch/index.php/Goanna_and_Eposix_setup]
 
 
@@ -21,7 +21,6 @@ Site [http://sourceforge.net/projects/goanna]
 
 
 *Envairoment Variables*
-
 
 
 

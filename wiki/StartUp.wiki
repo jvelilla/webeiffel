@@ -4,8 +4,8 @@
 Pagina en SourceForge [http://sourceforge.net/projects/goanna] 
 
 ==Entorno de Desarrollo Linux(Ubuntu 6.10)==
- 
- Eiffel Compiler [http://eiffelsoftware.origo.ethz.ch/index.php/Main_Page]
+  
+  Eiffel Compiler [http://eiffelsoftware.origo.ethz.ch/index.php/Main_Page]
   {{{
    # EiffelStudio Envairoment Variables  
    export ISE_EIFFEL=/usr/local/Eiffel57
@@ -13,7 +13,14 @@ Pagina en SourceForge [http://sourceforge.net/projects/goanna]
    export PATH=$PATH:$ISE_EIFFEL/studio/spec/$ISE_PLATFORM/bin
    }}}
 
-  Goanna version del repositorio SVN 
+
+
+ Para configurar el entorno seguir los siguientes pasos 
+ detallados en la pagina de origo [http://origo.ethz.ch/index.php/Goanna_and_Eposix_setup]
+ 
+ Una ves instalado chequear que las siguientes variables de entorno estan definidas.   
+ 
+   Goanna 
   {{{
     # GOANNA setup
     export GOANNA=[path]/goanna/

@@ -22,7 +22,7 @@ Pagina en SourceForge [http://sourceforge.net/projects/goanna]
 
 
   ===Dependencias del proyecto Goanna===
-   * GOBO *  [http://www.gobosoft.com/eiffel/gobo/download.html]
+   * GOBO*  [http://www.gobosoft.com/eiffel/gobo/download.html]
      {{{
      # GOBO setup
      export GOBO=[path]/gobo
@@ -48,6 +48,5 @@ Pagina en SourceForge [http://sourceforge.net/projects/goanna]
 
 *Configurar Apache en Ubuntu*
    
-
 
 

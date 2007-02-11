@@ -5,7 +5,8 @@ Pagina en SourceForge [http://sourceforge.net/projects/goanna]
 
 ==Entorno de Desarrollo Linux(Ubuntu 6.10)==
  
- * Eiffel Compiler* _Eiffel_ [http://eiffelsoftware.origo.ethz.ch/index.php/Main_Page]
+ * Eiffel Compiler* 
+                 _Eiffel_ [http://eiffelsoftware.origo.ethz.ch/index.php/Main_Page]
   {{{
    # EiffelStudio Envairoment Variables  
    export ISE_EIFFEL=/usr/local/Eiffel57
@@ -19,8 +20,6 @@ Pagina en SourceForge [http://sourceforge.net/projects/goanna]
     export GOANNA=[path]/goanna/
     export PATH=$PATH:$GOANNA/src/goa_build
   }}} 
-
-
   ===Dependencias del proyecto Goanna===
    * GOBO*  [http://www.gobosoft.com/eiffel/gobo/download.html]
      {{{
@@ -48,5 +47,4 @@ Pagina en SourceForge [http://sourceforge.net/projects/goanna]
 
 *Configurar Apache en Ubuntu*
    
-
 

@@ -5,8 +5,7 @@ Pagina en SourceForge [http://sourceforge.net/projects/goanna]
 
 ==Entorno de Desarrollo Linux(Ubuntu 6.10)==
  
- * Eiffel Compiler* 
-                 _Eiffel_ [http://eiffelsoftware.origo.ethz.ch/index.php/Main_Page]
+ Eiffel Compiler [http://eiffelsoftware.origo.ethz.ch/index.php/Main_Page]
   {{{
    # EiffelStudio Envairoment Variables  
    export ISE_EIFFEL=/usr/local/Eiffel57
@@ -14,14 +13,15 @@ Pagina en SourceForge [http://sourceforge.net/projects/goanna]
    export PATH=$PATH:$ISE_EIFFEL/studio/spec/$ISE_PLATFORM/bin
    }}}
 
-  * Goanna* version del repositorio SVN 
+  Goanna version del repositorio SVN 
   {{{
     # GOANNA setup
     export GOANNA=[path]/goanna/
     export PATH=$PATH:$GOANNA/src/goa_build
   }}} 
-  ===Dependencias del proyecto Goanna===
-   * GOBO*  [http://www.gobosoft.com/eiffel/gobo/download.html]
+ 
+===Dependencias del proyecto Goanna===
+   GOBO  [http://www.gobosoft.com/eiffel/gobo/download.html]
      {{{
      # GOBO setup
      export GOBO=[path]/gobo
@@ -29,12 +29,12 @@ Pagina en SourceForge [http://sourceforge.net/projects/goanna]
      export GOBO_OS=unix
      export PATH=$PATH:$GOBO/bin
      }}}
-   * EPOSIX*  
+   EPOSIX  
     {{{ 
-      # EPOSIX setup
-      export EPOSIX=[path]/eposix
+     # EPOSIX setup
+     export EPOSIX=[path]/eposix
      }}} 
-   * LOG4E*   
+   LOG4E   
     {{{ 
      # LOG4E
      export LOG4E=[path]/log4e
@@ -47,4 +47,3 @@ Pagina en SourceForge [http://sourceforge.net/projects/goanna]
 
 *Configurar Apache en Ubuntu*
    
-

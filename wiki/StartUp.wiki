@@ -48,9 +48,30 @@ Pagina en SourceForge [http://sourceforge.net/projects/goanna]
     }}}
 
 
-     
-*Instalar FastCgi* 
+===Instalar Apache===
+
+ {{{
+      sudo aptitude install apache2
+
+ }}} 
+
+===Instalar FastCGI===
+ {{{
+  
+   1. Bajar http://fastcgi.com/dist/; 
+   2. tar zxvf mod_fastcgi-2.4.2.tar.gz
+   3. cd mod_fastcgi-2.4.2
+   
+   ./configure
+    make
+    make install
+
+  }}}   
+
+  Reiniciar el Apache
+ {{{
+    sudo /etc/init.d/apache2 restart
+ }}}
 
 
-*Configurar Apache en Ubuntu*
    

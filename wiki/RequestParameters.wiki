@@ -1,5 +1,8 @@
 = Procesamiento del Form =
 
-  
+Cada parametro en un form de HTML es procesado por un objeto de tipo GOA_DEFERRED_PARAMETER.
 
 
+     
+  *Jerarquia de clases
+  *Definicion de un parametro 

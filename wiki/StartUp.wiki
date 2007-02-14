@@ -72,16 +72,19 @@ Pagina en SourceForge [http://sourceforge.net/projects/goanna]
     sudo /etc/init.d/apache2 restart
  }}}
 
-Editar el archivo httpd.conf
+Editar el archivo httpd.conf, cada aplicacion goanna que corre sobre el 
+WebServer debe tener su propio FastCgiExternalServer con un path y port unico.
+El numero de port es asignado en la clase _APPLICATION_CONFIGURATION.port_.
+
 
 {{{
 
 LoadModule fastcgi_module /usr/lib/apache2/modules/mod_fastcgi.so
-FastCgiExternalServer "[path]/EIFGENs/web_application/F_code/web_application" -host localhost:7879
+FastCgiExternalServer "[path_to_executable_code]/app_name" -host localhost:7879
 
-Alias /sample "[path]/EIFGENs/web_application/F_code/web_application"
+Alias /sample "[path_to_executable_code]/app_name"
 
-<Directory [path]/EIFGENs/web_application/F_code/>
+<Directory[path_to_executable_code]/>
  SetHandler fastcgi-script
  Options ExecCGI
  Order Allow,Deny

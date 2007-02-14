@@ -1,7 +1,7 @@
 #labels Phase-Deploy,Phase-Implementation,Featured
 =Introduccion al Framework Goanna(Draft)=
 
-Pagina en SourceForge [http://sourceforge.net/projects/goanna] 
+Pagina en SourceForge http://sourceforge.net/projects/goanna
 
 ==Entorno de Desarrollo Linux(Ubuntu 6.10)==
   
@@ -94,4 +94,3 @@ Alias /sample "[path_to_executable_code]/app_name"
 
 Finalmente debe crear un directorio en /var/www/ que se corresponda al valor
 del alias definido en el archivo httpd.conf
-

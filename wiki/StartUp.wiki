@@ -91,4 +91,7 @@ Alias /sample "[path_to_executable_code]/app_name"
  Allow from all
 </Directory>  
 }}}
-   
+
+Finalmente debe crear un directorio en /var/www/ que se corresponda al valor
+del alias definido en el archivo httpd.conf
+

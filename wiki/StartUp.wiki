@@ -72,5 +72,20 @@ Pagina en SourceForge [http://sourceforge.net/projects/goanna]
     sudo /etc/init.d/apache2 restart
  }}}
 
+Editar el archivo httpd.conf
 
+{{{
+
+LoadModule fastcgi_module /usr/lib/apache2/modules/mod_fastcgi.so
+FastCgiExternalServer "[path]/EIFGENs/web_application/F_code/web_application" -host localhost:7879
+
+Alias /sample "[path]/EIFGENs/web_application/F_code/web_application"
+
+<Directory [path]/EIFGENs/web_application/F_code/>
+ SetHandler fastcgi-script
+ Options ExecCGI
+ Order Allow,Deny
+ Allow from all
+</Directory>  
+}}}
    

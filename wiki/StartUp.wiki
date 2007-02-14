@@ -3,10 +3,14 @@
 Into Eiffel, por Ian Joyner http://web.mac.com/joynerian/iWeb/Ian%20Joyner/Into%20Eiffel.html
 
 *Bibliography*
-#1Object Oriented Software Construction (2nd edition),Bertrand Meyer, 1997.
-#2Eiffel, The Language, Bertand Meyer. 
-#3Software Reuse, Bertand Meyer.
-#4Design by Contract, by Example, James McKim and Richard Mitchell, 2001.
+#Object Oriented Software Construction (2nd edition),Bertrand Meyer, 1997.
+
+#Eiffel, The Language, Bertand Meyer.
+ 
+#Software Reuse, Bertand Meyer.
+
+#Design by Contract, by Example, James McKim and Richard Mitchell, 2001.
+
 
 
 =Introduccion al Framework Goanna(Draft)=

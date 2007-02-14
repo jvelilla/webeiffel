@@ -3,6 +3,8 @@
 
 Pagina en SourceForge http://sourceforge.net/projects/goanna
 
+Introduccion al framework: http://goanna.sourceforge.net/application.htm
+
 ==Entorno de Desarrollo Linux(Ubuntu 6.10)==
   
   Eiffel Compiler [http://eiffelsoftware.origo.ethz.ch/index.php/Main_Page]

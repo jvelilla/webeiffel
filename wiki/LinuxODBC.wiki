@@ -1,0 +1,49 @@
+=Introducción=
+Esta seccion contiene la información necesaria para poder acceder a una base de datos por
+ODBC^[1]^ en un entorno Linux.  
+A continuación se describe 
+ *  instalación de la base de datos en este caso MySQL^[2]^ 
+ *  instalación del driver de ODBC de MySQL^[3]^.
+ *  instalacion del odbc driver manager (UnixOdbc^[4]^, iODBC^[5]^) 
+ *  ejemplo de test de la conección
+ 
+
+==Instalacion de MySQL==
+Hay varias opciones para instalar el servidor y cliente del MySQL. 
+El mas simple de todos es utilizar el *Synaptic Package Manager* (buscar mysql)
+o utilizar *apt* o *aptitude*.
+Si utilzamos *apt* 
+{{{
+   //buscamos el el paquete
+   $apt-cache search mysql
+   // instalamos el servidor y el cliente
+   $sudo apt-get install mysql-server-5.0 mysql-client-5.0
+}}}
+
+Es opcional instalar el MySQLBrowser, desde el Menu 
+
+{{{
+     Apllications -->Add/Remove-->Programming //luego seleccion MySQLQueryBrowser
+}}}
+   
+
+
+
+
+
+==Referencias==
+[1] [http://en.wikipedia.org/wiki/Open_Database_Connectivity] (ODBC)
+
+[2] [http://www.mysql.com/]
+
+   
+[3] [http://dev.mysql.com/downloads/connector/odbc/3.51.html]
+
+[4] [http://www.unixodbc.org/]
+
+[5] [http://www.iodbc.org/]
+
+
+
+
+

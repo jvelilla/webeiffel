@@ -33,13 +33,14 @@ En las siguientes instalaciones solo se describe una sola opcion de instalacion
 
 ==Instalacion del Driver de ODBC para MySQL==
 Para MySQL utilizamos el driver de ODBC
+
 {{{
          $sudo apt-get install libmyodbc  
 }}}
 
 
-
 ==Instalacion del Driver Manager ODBC UnixODBC== 
+
 En este caso usamos unixodbc.
 {{{
       $sudo apt-get install unixodbc
@@ -50,6 +51,7 @@ Una ves realizada la instalación
 Configuramos los archivos _odbc.ini_ y _odbcinst.ini_
 
 *odbc.ini*
+
 {{{
    [mydb]
    Driver       = /usr/lib/odbc/libmyodbc.so
@@ -64,6 +66,7 @@ Configuramos los archivos _odbc.ini_ y _odbcinst.ini_
   }}}
 
 *odbcinst.ini*
+
 {{{
    [MySQL]
    Description	= MySQL driver
@@ -85,7 +88,6 @@ Configuramos los archivos _odbc.ini_ y _odbcinst.ini_
 [4] [http://www.unixodbc.org/]
 
 [5] [http://www.iodbc.org/]
-
 
 
 

@@ -39,8 +39,9 @@ Para MySQL utilizamos el driver de ODBC
 }}}
 
 
-==Instalacion del Driver Manager ODBC UnixODBC== 
+==Instalacion del Driver Manager UnixODBC==
 
+ 
 En este caso usamos unixodbc.
 {{{
       $sudo apt-get install unixodbc
@@ -88,6 +89,12 @@ Configuramos los archivos _odbc.ini_ y _odbcinst.ini_
 [4] [http://www.unixodbc.org/]
 
 [5] [http://www.iodbc.org/]
+
+
+
+
+
+
 
 
 

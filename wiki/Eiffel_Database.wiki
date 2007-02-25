@@ -18,8 +18,6 @@ Eiffel -> EiffelStore -> ODBC -> myODBC -> MySQL
 
 ==Usando EiffelStore y ODBC==
 
-Before using ODBC we need to compile and install libodbc library. Copy the Eiffel runtime configuration file config.sh into $ISE_EIFFEL/library/store/dbms/rdbms/odbc/Clib, change to that directory and type:
-
 Antes de utilizar ODBC es necesario compilar e instalar _libodbc. Moverse al direcotorio  y despues ejecutar el siguiente comando
  
 

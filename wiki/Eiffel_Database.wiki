@@ -55,7 +55,7 @@ El archivo del proyecto deberia tambien incluir el siguiente cluster
 
 Las clases principales para acceder a la Base de Datos usando ODBC son
 
-    * DATABASE_APPL[ODBC]
+    * DATABASE_APPL[ ODBC ]
     * DB_CONTROL
     * DB_RESULT
     * DB_SELECTION 

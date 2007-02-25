@@ -111,6 +111,32 @@ Deberiamos ver el Entorno de Desarrollo
 http://farm1.static.flickr.com/159/401870829_bf80e39726_t.jpg  
 [http://www.flickr.com/photos/27971095@N00/401870829/]
 
+
+Luego debemos Abrir el proyecto _esql_, usamos  *Add Proyect* buscamos el archivo *esql.ecf* desde el browser del file system y apretamos *Open* 
+Esperamos que el proyecto compile, y ahora podemos ejecutar el proyecto.
+
+Al ejecutar el proyecto, se ejecuta en linea de comando, y deberíamos ver algo similar a 
+esto
+
+{{{
+Database user authentication:
+Data Source Name: mydb    //ver LinuxODBC
+Name: root
+Password: 
+
+Welcome to the SQL interpreter
+Database used: ODBC
+        Type 'exit' to terminate
+
+SQL> 
+
+
+}}}
+
+Ahora vamos a crear la Base de Datos test y luego vamos a crear una tabla usando 
+esql. Usando los dos scripts siguientes
+
+
 Ademas de esto vamos a crear un esquema llamado test y vamos a crear una tabla user
 {{{
 CREATE DATABASE test
@@ -128,6 +154,21 @@ CREATE TABLE user (
        PRIMARY KEY (id),
        UNIQUE KEY (username)
 );
+
+}}}
+
+Ahora si hacemos un `select * from user` no vamos a ver ningun dato dado que dentro del esquema test la base user esta sin datos
+
+Entonces creamos un par de usuarios usando esql y el query browser.
+
+{{{
+ SQL> INSERT INTO test.user (id, username, password,firstname, lastname,email,   description) VALUES (2,"cmolina","pwd", "cristian", "molina", "cm@localhost","aggo");
+
+SQL> select * from test.user
+1       jvelilla        pwd     javier  velilla         jv@localhost    aggo 
+2       cmolina         pwd     cristian        molina  cm@localhost    aggo 
+SQL> 
+
 
 }}}
 

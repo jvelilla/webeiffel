@@ -1,5 +1,13 @@
-=Introduccion=
-Ejemplo de acceso a la Base desde Eiffel.
+=Introducción=
+Ejemplo de acceso a la Base desde Eiffel. Antes de escribir algun código vamos a tratar de
+ejecutar algun ejemplo que viene con la distribución de Eiffel57. Esto nos va a permitir chequear que la coneccion a la Base de Datos via ODBC funciona correctamente, ademas de 
+ver como configurar un simple ejemplo de acceso a la DB en Eiffel.
+
+
+
+
+
+
 
 ==Referencias==
 [1] [http://www.bon-method.com/index_normal.htm] 

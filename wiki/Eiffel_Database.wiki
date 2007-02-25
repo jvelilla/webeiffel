@@ -5,6 +5,57 @@ ver como configurar un simple ejemplo de acceso a la DB en Eiffel.
 
 A continuación describimos como utilizar el acceso a datos con EiffelStore basado en el contenido definido en el proyecto origo^[2]^ 
 
+EiffelStore provee una interface entre Eiffel y un Sistema de Gestión de Base de Datos (SGBD o DBMS). Las aplicaciones escritas con EiffelStore son independientes del SGBD, lo cual permite almacenar y recuperar objetos desde diferentes bases de datos.
+
+Para los ejemplos sobre la capa del SGDB usamos ODBC el cual provee una API procedural para usar consultas SQL para acceder a los datos independientemente del lenguaje de programacion, el sistema operativo y el sistema de bases de datos. Como Base de Datos usamos MySQL, por lo cual necesitamos el driver ODBC del m ismo para conectarnos por ODBC al MySQL.
+
+El Mapeo entre Eiffel y MySQL es realizado de la siguiente manera.
+
+
+Eiffel -> EiffelStore -> ODBC -> myODBC -> MySQL
+
+
+
+==Usando EiffelStore y ODBC==
+
+Before using ODBC we need to compile and install libodbc library. Copy the Eiffel runtime configuration file config.sh into $ISE_EIFFEL/library/store/dbms/rdbms/odbc/Clib, change to that directory and type:
+
+finish_freezing -library
+
+The libodbc.a library is installed in ${ISE_EIFFEL}/library/store/spec/${ISE_PLATFORM}/lib/.
+
+Add to your ecf file following libraries
+
+<library name="base" location="$ISE_LIBRARY\library\base\base.ecf"/>
+<library name="time" location="$ISE_LIBRARY\library\time\time.ecf"/>
+
+and following external resources
+
+<external_include location="$(ISE_EIFFEL)/library/store/dbms/rdbms/odbc/Clib"/>
+<external_object location="$(ISE_EIFFEL)/library/store/spec/$(ISE_PLATFORM)/lib/libodbc.a -liodbc"/>
+
+The project file should also include following cluster
+
+<cluster name="eiffel_store" location="${ISE_EIFFEL}\library\store\" recursive="true"/>
+
+
+The main classes for database access using ODBC are
+
+    * DATABASE_APPL[ODBC]
+    * DB_CONTROL
+    * DB_RESULT
+    * DB_SELECTION 
+
+
+
+Links:
+
+    * EiffelStore
+    * iODBC
+    * MySQL-ODBC Gateway
+    * Eiffel mySQL
+    * DALE 
+
 
 
 

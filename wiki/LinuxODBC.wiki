@@ -52,6 +52,10 @@ En este caso usamos unixodbc.
 Una ves realizada la instalación 
 Configuramos los archivos _odbc.ini_ y _odbcinst.ini_
 
+{{{
+      $sudo gedit /etc/odbc.ini
+}}}
+
 *odbc.ini*
 
 {{{
@@ -66,6 +70,13 @@ Configuramos los archivos _odbc.ini_ y _odbcinst.ini_
    OPTION       = 3
    SOCKET       =
   }}}
+
+
+
+
+{{{
+      $sudo gedit /etc/odbcinst.ini
+}}}
 
 *odbcinst.ini*
 
@@ -120,6 +131,7 @@ SQL>
 [4] [http://www.unixodbc.org/]
 
 [5] [http://www.iodbc.org/]
+
 
 
 

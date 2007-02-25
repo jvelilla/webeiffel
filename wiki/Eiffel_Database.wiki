@@ -2,4 +2,4 @@
 Ejemplo de acceso a la Base desde Eiffel.
 
 ==Referencias==
-[1] [http://www.bon-method.com/index_normal.htm]  [Capitulo 11 del libro Seamless Object-Oriented Software  Architecture Analysis and Design of Reliable Systems]
+[1] [http://www.bon-method.com/index_normal.htm]    [Capitulo 11 del libro Seamless Object-Oriented Software  Architecture Analysis and Design of Reliable Systems]

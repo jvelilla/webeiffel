@@ -60,7 +60,25 @@ Las clases principales para acceder a la Base de Datos usando ODBC son
 
 
 
-El primer ejemplo que vamos a utilizar es ESQL"${ISE_EIFFEL}/examples/store/esql"^[3]^
+El primer ejemplo que vamos a utilizar es ESQL"${ISE_EIFFEL}/examples/store/esql"^[3]^, basicamente como describe la documentación
+
+esql: A command line SQL parser: very useful to test your Database connection!
+
+Ademas de esto vamos a crear un esquema llamado test y vamos a crear una tabla user
+{{{
+CREATE TABLE user (
+       id  		 int     NOT NULL 	AUTO_INCREMENT,
+       username	 varchar(50)	 NOT NULL 	default '',
+       password	 varchar(50)	 NOT NULL 	default '',
+       firstname		 varchar(255)	 NOT NULL 	default '',
+       lastname	 	 varchar(255)	 NOT NULL 	default '',
+       email	 	 varchar(255)	 NOT NULL 	default '',
+       description 	 varchar(255)	 NOT NULL 	default '',
+       PRIMARY KEY (id),
+       UNIQUE KEY (username)
+);
+
+}}}
 
 
 ==Referencias==

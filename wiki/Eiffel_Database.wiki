@@ -20,47 +20,45 @@ Eiffel -> EiffelStore -> ODBC -> myODBC -> MySQL
 
 Before using ODBC we need to compile and install libodbc library. Copy the Eiffel runtime configuration file config.sh into $ISE_EIFFEL/library/store/dbms/rdbms/odbc/Clib, change to that directory and type:
 
-finish_freezing -library
+Antes de utilizar ODBC es necesario compilar e instalar _libodbc. Moverse al direcotorio  y despues ejecutar el siguiente comando
+ 
 
-The libodbc.a library is installed in ${ISE_EIFFEL}/library/store/spec/${ISE_PLATFORM}/lib/.
+{{{
+    $ISE_EIFFEL/library/store/dbms/rdbms/odbc/Clib>finish_freezing -library
+}}}
 
-Add to your ecf file following libraries
+Una ves compilado exitosamente la libreria _libodbc.a_  queda instalada en el siguiente
+directorio ${ISE_EIFFEL}/library/store/spec/${ISE_PLATFORM}/lib/.
 
+Agregar al archivo de configuracion ecf las siguientes librerias.
+
+{{{
 <library name="base" location="$ISE_LIBRARY\library\base\base.ecf"/>
 <library name="time" location="$ISE_LIBRARY\library\time\time.ecf"/>
+}}}
 
-and following external resources
+y los siguientes recursos externos
 
+{{{
 <external_include location="$(ISE_EIFFEL)/library/store/dbms/rdbms/odbc/Clib"/>
 <external_object location="$(ISE_EIFFEL)/library/store/spec/$(ISE_PLATFORM)/lib/libodbc.a -liodbc"/>
+}}}
 
 The project file should also include following cluster
 
+El archivo del proyecto deberia tambien incluir el siguiente cluster
+
+{{{
 <cluster name="eiffel_store" location="${ISE_EIFFEL}\library\store\" recursive="true"/>
+}}}
 
 
-The main classes for database access using ODBC are
+Las clases principales para acceder a la Base de Datos usando ODBC son
 
     * DATABASE_APPL[ODBC]
     * DB_CONTROL
     * DB_RESULT
     * DB_SELECTION 
-
-
-
-Links:
-
-    * EiffelStore
-    * iODBC
-    * MySQL-ODBC Gateway
-    * Eiffel mySQL
-    * DALE 
-
-
-
-
-
-
 
 
 

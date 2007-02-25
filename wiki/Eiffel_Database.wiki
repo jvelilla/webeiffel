@@ -67,6 +67,9 @@ esql: A command line SQL parser: very useful to test your Database connection!
 Editar el archivo esql.ecf
 
 {{{
+//editar el archivo copiando el siguiente código de configuración
+$>gedit $ISE_EIFFEL/examples/store/esql/esql.ecf
+
 <?xml version="1.0" encoding="ISO-8859-1"?><system xmlns="http://www.eiffel.com/developers/xml/configuration-1-0-0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.eiffel.com/developers/xml/configuration-1-0-0 http://www.eiffel.com/developers/xml/configuration-1-0-0.xsd" name="esql" uuid="EFFCDC06-058C-4D61-A59F-195EF996CCB7">
 	<target name="common" abstract="true">
 		<root cluster="root_cluster" class="ESQL" feature="make"/>
@@ -96,6 +99,12 @@ Editar el archivo esql.ecf
 
 }}}
 
+Una ves editado el archivo de configuración, abrir el proyecto con EiffelStudio
+{{{
+
+ $>cd $ISE_EIFFEL///studio/spec/$(ISE_PLATFORM)/bin
+ $>estudio
+}}}
 
 
 

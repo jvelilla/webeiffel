@@ -1,2 +1,6 @@
 =Introduccion=
 Ejemplo de acceso a la Base desde Eiffel.
+
+==Referencias==
+[1] http://www.bon-method.com/index_normal.htm [Capitulo 11]
+

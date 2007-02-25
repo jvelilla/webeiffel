@@ -71,9 +71,9 @@ CREATE TABLE user (
        username	 varchar(50)	 NOT NULL 	default '',
        password	 varchar(50)	 NOT NULL 	default '',
        firstname		 varchar(255)	 NOT NULL 	default '',
-       lastname	 	 varchar(255)	 NOT NULL 	default '',
-       email	 	 varchar(255)	 NOT NULL 	default '',
-       description 	 varchar(255)	 NOT NULL 	default '',
+       lastname	 	         varchar(255)	 NOT NULL 	default '',
+       email	 	         varchar(255)	 NOT NULL 	default '',
+       description 	         varchar(255)	 NOT NULL 	default '',
        PRIMARY KEY (id),
        UNIQUE KEY (username)
 );

@@ -66,6 +66,10 @@ esql: A command line SQL parser: very useful to test your Database connection!
 
 Ademas de esto vamos a crear un esquema llamado test y vamos a crear una tabla user
 {{{
+    CREATE DATABASE test
+}}}
+
+{{{
 CREATE TABLE user (
        id  		 int     NOT NULL 	AUTO_INCREMENT,
        username	 varchar(50)	 NOT NULL 	default '',

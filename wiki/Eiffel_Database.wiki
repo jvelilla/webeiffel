@@ -60,9 +60,13 @@ Las clases principales para acceder a la Base de Datos usando ODBC son
 
 
 
+El primer ejemplo que vamos a utilizar es ESQL"${ISE_EIFFEL}/examples/store/esql"^[3]^
+
+
 ==Referencias==
 [1] [http://www.bon-method.com/index_normal.htm] 
     
 Seamless Object-Oriented Software  Architecture Analysis and Design of Reliable Systems Capitulo 11
 
 [2] http://origo.ethz.ch/index.php/DB
+[3] http://docs.eiffel.com/eiffelstudio/docs_no_content.html

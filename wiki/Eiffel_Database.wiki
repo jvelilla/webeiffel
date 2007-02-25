@@ -106,6 +106,9 @@ Una ves editado el archivo de configuración, abrir el proyecto con EiffelStudio
  $>estudio
 }}}
 
+Deberiamos ver el Entorno de Desarrollo
+
+[http://farm1.static.flickr.com/159/401870829_bf80e39726.jpg?v=0]
 
 
 

@@ -78,6 +78,36 @@ Configuramos los archivos _odbc.ini_ y _odbcinst.ini_
 }}}
 
 
+A continuacion testeamos que drivers estan definidos
+
+{{{
+jvelilla@jvelilla-desktop:/usr/local/lib$ odbcinst -j
+unixODBC 2.2.11
+DRIVERS............: /etc/odbcinst.ini
+SYSTEM DATA SOURCES: /etc/odbc.ini
+USER DATA SOURCES..: /home/jvelilla/.odbc.ini
+
+}}}
+
+Por ultimo testeamos la conección al DSN
+usando el siguiente comando `isql -v DSN_NAME usr_db pwd_db`
+
+
+{{{
+jvelilla@jvelilla-desktop:/usr/local/lib$ isql -v mydb root
++---------------------------------------+
+| Connected!                            |
+|                                       |
+| sql-statement                         |
+| help [tablename]                      |
+| quit                                  |
+|                                       |
++---------------------------------------+
+SQL> 
+
+}}}
+ 
+
 ==Referencias==
 [1] [http://en.wikipedia.org/wiki/Open_Database_Connectivity] (ODBC)
 
@@ -89,6 +119,8 @@ Configuramos los archivos _odbc.ini_ y _odbcinst.ini_
 [4] [http://www.unixodbc.org/]
 
 [5] [http://www.iodbc.org/]
+
+
 
 
 

@@ -108,8 +108,7 @@ Una ves editado el archivo de configuración, abrir el proyecto con EiffelStudio
 
 Deberiamos ver el Entorno de Desarrollo
 
-<a href="http://www.flickr.com/photos/27971095@N00/401870829/" title="Photo Sharing"><img src="http://farm1.static.flickr.com/159/401870829_bf80e39726_o.png" width="1280" height="1024" alt="EiffelStudioStartUp" /></a>
-
+[http://www.flickr.com/photos/27971095@N00/401870829/]
 
 Ademas de esto vamos a crear un esquema llamado test y vamos a crear una tabla user
 {{{

@@ -3,6 +3,10 @@ Ejemplo de acceso a la Base desde Eiffel. Antes de escribir algun código vamos 
 ejecutar algun ejemplo que viene con la distribución de Eiffel57. Esto nos va a permitir chequear que la coneccion a la Base de Datos via ODBC funciona correctamente, ademas de 
 ver como configurar un simple ejemplo de acceso a la DB en Eiffel.
 
+A continuación describimos como utilizar el acceso a datos con EiffelStore basado en el contenido definido en el proyecto origo^[2]^ 
+
+
+
 
 
 
@@ -13,3 +17,5 @@ ver como configurar un simple ejemplo de acceso a la DB en Eiffel.
 [1] [http://www.bon-method.com/index_normal.htm] 
     
 Seamless Object-Oriented Software  Architecture Analysis and Design of Reliable Systems Capitulo 11
+
+[2] http://origo.ethz.ch/index.php/DB

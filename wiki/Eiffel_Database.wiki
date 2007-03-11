@@ -60,12 +60,12 @@ Las clases principales para acceder a la Base de Datos usando ODBC son
 
 Para conectarnos a la Base de datos, necesitamos crear un _handle_; este handle vinculara las clases de la interface con las clases de implementacion correspondiente mapeadas a la BD actual. El handle es implementado por DATABASE_APPL[ ODBC ]
 
-`	database_appl: DATABASE_APPL [ODBC]
-		-- Database handle.
-	...
-	create database_appl.login (a_name, a_psswd)
-	database_appl.set_base
-`
+`database_appl: DATABASE_APPL [ ODBC ] ` 
+		`-- Database handle.`
+	`...`
+	`create database_appl.login (a_name, a_psswd)`
+	`database_appl.set_base`
+
 
 El primer ejemplo que vamos a utilizar es ESQL"${ISE_EIFFEL}/examples/store/esql"^[3]^, basicamente como describe la documentación
 

@@ -69,6 +69,18 @@ Para conectarnos a la Base de datos, necesitamos crear un _handle_; este handle 
 	`database_appl.set_base`
 
 El metodo `set_base` vincula la interface de EiffelStore a su especifico handle
+El parametro generico de DATABASE_APPL especifica el DBMS actualmente usado.
+
+Una ves que el handle esta creado, necesitamos crear un session manager, el que nos permitira manejar la DB, especialmente para manejar la coneccion, deconeccion y manejo de errores. La clase encargada de esto es DB_CONTROL.
+
+	`session_control: DB_CONTROL`
+
+		`-- Session control.`
+
+	`create session_control.make`
+
+	`session_control.connect`
+ 
 
 El primer ejemplo que vamos a utilizar es ESQL"${ISE_EIFFEL}/examples/store/esql"^[3]^, basicamente como describe la documentación
 

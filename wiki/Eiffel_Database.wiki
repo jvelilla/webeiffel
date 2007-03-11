@@ -68,6 +68,7 @@ Para conectarnos a la Base de datos, necesitamos crear un _handle_; este handle 
 
 	`database_appl.set_base`
 
+El metodo `set_base` vincula la interface de EiffelStore a su especifico handle
 
 El primer ejemplo que vamos a utilizar es ESQL"${ISE_EIFFEL}/examples/store/esql"^[3]^, basicamente como describe la documentación
 

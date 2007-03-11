@@ -63,7 +63,9 @@ Para conectarnos a la Base de datos, necesitamos crear un _handle_; este handle 
 `database_appl: DATABASE_APPL [ ODBC ] ` 
 		`-- Database handle.`
 	`...`
+
 	`create database_appl.login (a_name, a_psswd)`
+
 	`database_appl.set_base`
 
 

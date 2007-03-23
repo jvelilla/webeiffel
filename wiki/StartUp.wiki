@@ -2,6 +2,9 @@
 =Introduccion a Eiffel=
 Into Eiffel, por Ian Joyner http://web.mac.com/joynerian/iWeb/Ian%20Joyner/Into%20Eiffel.html
 
+Why Eiffel, por Ian Joyner
+http://web.mac.com/joynerian/iWeb/Ian%20Joyner/Eiffel.html
+
 *Bibliography*
 
 1.Object Oriented Software Construction (2nd edition),Bertrand Meyer, 1997.

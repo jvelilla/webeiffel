@@ -59,3 +59,14 @@ Name [ ____ ] Name may not be empty. Name was not updated and remains 'admin'.
                                Name or Password re Incorrect
 
 Password [ cualquierpassword ]
+
+* Caso 4 : Supongamos que nos logeamos correctamente
+Si apretamos el back button del browser, obtendermos 
+la una pagina de login con el siguiente mensage
+
+ Log In
+Name [ admin ] Name or Password are Incorrect
+Password [ ___ ] Password may not be empty
+
+
+

@@ -52,6 +52,7 @@ Password [ ____ ]    Password may not be empty
  
 
 Caso 3 (siguiendo el caso 2 si borramos  el nombre y ponemos un password incorrecto obtenemos el siguiente mensaje)
+
 Log In
 
 Name [ ____ ] Name may not be empty. Name was not updated and remains 'admin'. 

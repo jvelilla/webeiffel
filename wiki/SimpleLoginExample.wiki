@@ -21,3 +21,6 @@ Este es un simple ejemplo de un Login Page, no se accede a una Base de Datos,
 simplemente se chequea que el los datos sean iguales a los hardcodeados en el
 codigo. 
 En el ejemplo el username: "admin" y el password:"password".
+
+
+http://farm1.static.flickr.com/188/441920709_29ca2e4388_o.png

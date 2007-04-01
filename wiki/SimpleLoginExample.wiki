@@ -27,7 +27,7 @@ En el ejemplo el username: "admin" y el password:"password".
 
 == Design ==
 
-http://farm1.static.flickr.com/201/441960780_0ce51a8207.jpg
+http://farm1.static.flickr.com/201/441960780_b7c2dc0e71_o.png
 
 
 == Excecution ==

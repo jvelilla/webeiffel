@@ -15,7 +15,7 @@ Goanna Web Framework
 
 == Home Page ==
   * Successful Message
-  * Logout Application
+  * Link to Logout Application
 
 == Logout Page ==
   * Successful Logout Message
@@ -25,6 +25,20 @@ simplemente se chequea que el los datos sean iguales a los hardcodeados en el
 codigo. 
 En el ejemplo el username: "admin" y el password:"password".
 
+== Design ==
+[TBC]
+
+
+== Excecution ==
+  # Login Page
+  # if SuccesFull Login then
+            # Show HomePage
+                 # if Logout is cliked then
+                       # Show LogoutPage
+                 # else
+                       # Show HomePage
+  # else
+            # Show LoginPage with Errors
 
 http://farm1.static.flickr.com/188/441920709_29ca2e4388_o.png
 
@@ -70,4 +84,3 @@ la una pagina de login con el siguiente mensage
  Log In
 Name [ admin ] Name or Password are Incorrect
 Password [ ___ ] Password may not be empty
-

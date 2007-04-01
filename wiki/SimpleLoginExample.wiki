@@ -1,4 +1,4 @@
-= Simple Login Example SRS =
+= Simple Login Example SRS (DRAFT) =
 Un simple ejemplo que muestra como desarrollar un simple Web Page Login en
 Goanna Web Framework
 
@@ -38,11 +38,11 @@ Error de Login
 
 http://farm1.static.flickr.com/183/441933795_4f9062f482_o.png
 
-Caso 1: 
+* Caso 1 *: 
 En caso de que el nombre de usuario o password sean incorrectos se mostrara 
 el mensaje :Name or Password are Incorrect
 
-Caso 2:
+* Caso 2 *:
  
 Log In
 
@@ -51,7 +51,7 @@ Name [ admin ]   Name or Password are Incorrect
 Password [ ____ ]    Password may not be empty
  
 
-Caso 3 (siguiendo el caso 2 si borramos  el nombre y ponemos un password incorrecto obtenemos el siguiente mensaje)
+* Caso 3 * :(siguiendo el caso 2 si borramos  el nombre y ponemos un password incorrecto obtenemos el siguiente mensaje)
 
 Log In
 

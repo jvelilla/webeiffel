@@ -9,3 +9,16 @@ Goanna Web Framework
    ver [http://code.google.com/p/webeiffel/wiki/StartUp]
 
 == Page Login ==
+  * UserName
+  * Password 
+  * Submit      
+
+== Home Page ==
+  * Successful Message
+  * Logout Application
+
+Este es un simple ejemplo de un Login Page, no se accede a una Base de Datos,
+simplemente se chequea que el los datos sean iguales a los hardcodeados en el
+codigo. 
+En el ejemplo el username es: "admin" y el password:"password".
+

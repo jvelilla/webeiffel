@@ -34,6 +34,21 @@ Logout de la aplicacion
 
 http://farm1.static.flickr.com/204/441930069_baf635415a_o.png
 
-Error de Login
+Error de Login 
 
 http://farm1.static.flickr.com/183/441933795_4f9062f482_o.png
+
+Caso 1: 
+En caso de que el nombre de usuario o password sean incorrectos se mostrara 
+el mensaje :Name or Password are Incorrect
+
+Caso 2: 
+Log In
+Name [admin]   Name or Password are Incorrect
+Password []    Password may not be empty. 
+
+Caso 3 (siguiendo el caso 2 si borramos  el nombre y ponemos un password incorrecto obtenemos el siguiente mensaje)
+Log In
+Name [] Name may not be empty. Name was not updated and remains 'admin'. 
+                               Name or Password re Incorrect
+Password [cualquierpassword]

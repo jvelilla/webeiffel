@@ -29,7 +29,7 @@ En el ejemplo el username: "admin" y el password:"password".
 Notación BON 
 http://farm1.static.flickr.com/201/441960780_b7c2dc0e71_o.png
 
-Version en UML [ http://farm1.static.flickr.com/191/441963386_2bc2206247_o.png ]
+Version en UML [ http://www.flickr.com/photos/27971095@N00/441963386/ ]
 
 
 == Excecution ==

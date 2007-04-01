@@ -24,3 +24,7 @@ En el ejemplo el username: "admin" y el password:"password".
 
 
 http://farm1.static.flickr.com/188/441920709_29ca2e4388_o.png
+
+Si nos logeamos correctamente veremos la siguiente pagina
+
+http://farm1.static.flickr.com/193/441926985_1221ed12a3_o.png

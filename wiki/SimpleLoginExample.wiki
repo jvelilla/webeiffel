@@ -17,7 +17,10 @@ Goanna Web Framework
   * Successful Message
   * Logout Application
 
-Este es un simple ejemplo de un Login Page, no se accede a una Base de Datos,
+== Home Page ==
+  * Successful Logout Message
+   
+Es un simple ejemplo de un Login Page, no se accede a una Base de Datos,
 simplemente se chequea que el los datos sean iguales a los hardcodeados en el
 codigo. 
 En el ejemplo el username: "admin" y el password:"password".
@@ -67,6 +70,5 @@ la una pagina de login con el siguiente mensage
  Log In
 Name [ admin ] Name or Password are Incorrect
 Password [ ___ ] Password may not be empty
-
 
 

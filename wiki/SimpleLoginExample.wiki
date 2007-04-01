@@ -3,11 +3,10 @@ Un simple ejemplo que muestra como desarrollar un simple Web Page Login en
 Goanna Web Framework
 
 == System SetUp ==
-  *Apache web server.
-  *FastCGI Module in Goanna.
-  *MySQL as DB.
+  * Apache web server.
+  * FastCGI Module in Goanna.
+  * MySQL as DB.
    ver (TBD)
 
 == Page Login ==
-
 

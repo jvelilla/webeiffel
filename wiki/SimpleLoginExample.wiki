@@ -6,7 +6,6 @@ Goanna Web Framework
   * Apache web server.
   * FastCGI Module in Goanna.
   * MySQL as DB.
-   ver (TBD)
+   ver [http://code.google.com/p/webeiffel/wiki/StartUp]
 
 == Page Login ==
-

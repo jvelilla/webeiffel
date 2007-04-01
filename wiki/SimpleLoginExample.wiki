@@ -46,13 +46,15 @@ Caso 2:
  
 Log In
 
-Name [admin]   Name or Password are Incorrect
+Name [ admin ]   Name or Password are Incorrect
 
-Password []    Password may not be empty
+Password [ ____ ]    Password may not be empty
  
 
 Caso 3 (siguiendo el caso 2 si borramos  el nombre y ponemos un password incorrecto obtenemos el siguiente mensaje)
 Log In
-Name [] Name may not be empty. Name was not updated and remains 'admin'. 
+
+Name [ ____ ] Name may not be empty. Name was not updated and remains 'admin'. 
                                Name or Password re Incorrect
-Password [cualquierpassword]
+
+Password [ cualquierpassword ]

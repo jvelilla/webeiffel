@@ -26,8 +26,10 @@ codigo.
 En el ejemplo el username: "admin" y el password:"password".
 
 == Design ==
-
+Notación BON 
 http://farm1.static.flickr.com/201/441960780_b7c2dc0e71_o.png
+
+Version en UML [ http://farm1.static.flickr.com/191/441963386_2bc2206247_o.png ]
 
 
 == Excecution ==

@@ -31,6 +31,8 @@ http://farm1.static.flickr.com/201/441960780_b7c2dc0e71_o.png
 
 Version en UML [ http://www.flickr.com/photos/27971095@N00/441963386/ ]
 
+Source : [ http://webeiffel.googlecode.com/svn/trunk/examples/simple_login/ ]
+
 
 == Excecution ==
   # Login Page

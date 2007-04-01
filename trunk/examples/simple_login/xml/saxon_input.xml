@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<goa_page:page xmlns:goa_page="http://www.sourceforge.net/projects/goanna/goa_page" xmlns:goa_common="http://www.sourceforge.net/projects/goanna/goa_common" host_name="localhost" page_title="My Home Page..." style_sheet="goa_common.css">
+  <goa_common:paragraph>
+    <goa_common:text_item>My Home Page...</goa_common:text_item>
+  </goa_common:paragraph>
+  <goa_common:paragraph>
+    <goa_common:text_item>This is a simple Home Page</goa_common:text_item>
+  </goa_common:paragraph>
+  <goa_common:paragraph>
+    <goa_common:text_item>admin is logged into the system</goa_common:text_item>
+  </goa_common:paragraph>
+  <goa_common:paragraph>
+    <goa_common:hyperlink url="http://localhost/login/go_to.htm?page=logout">Logout</goa_common:hyperlink>
+  </goa_common:paragraph>
+</goa_page:page>

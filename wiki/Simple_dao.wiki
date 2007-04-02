@@ -1,7 +1,10 @@
 #labels Featured,Phase-Design,Phase-Requirements,Phase-Implementation
 = Simple Ejemplo de Acceso a Bases de Datos =
 
-Este ejemplo esta basado en el código de Origo project ^[1]^.
+Este ejemplo esta basado en el código de Origo project ^[1]^, simplificado, dado que
+la idea es llevar este diseño acotado, tomando las partes escenciales a otras alternativas de acceso a Base de Datos en Eiffel tales como EPOM y ECLI ^[4]^. Para poder realizar
+mas adelante un analisis comparativo
+
 El ejemplo usa EiffelStore, MySQL, ODBC y UNIXODBC ^[2,3]^ 
 
 == Diseño ==
@@ -17,4 +20,5 @@ http://webeiffel.googlecode.com/svn/trunk/examples/simple_dao/
 [1] http://origo.ethz.ch/index.php/Single_Sign-On
 [2] http://code.google.com/p/webeiffel/wiki/Eiffel_Database
 [3] http://code.google.com/p/webeiffel/wiki/LinuxODBC
+[4] http://safe.sourceforge.net/
 [TBC]

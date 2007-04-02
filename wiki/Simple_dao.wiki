@@ -1,6 +1,6 @@
 = Simple Ejemplo de Acceso a Bases de Datos =
 
-Este ejemmple esta basado en el código de Origo project.
+Este ejemplo esta basado en el código de Origo project ^1^.
 El ejemplo usa EiffelStore, MySQL, ODBC y UNIXODBC (ver)
 
 == Diseño ==
@@ -13,4 +13,5 @@ http://webeiffel.googlecode.com/svn/trunk/examples/simple_dao/
 
 
 == Referencias ==
+[1] http://origo.ethz.ch/index.php/Single_Sign-On
 [TBC]

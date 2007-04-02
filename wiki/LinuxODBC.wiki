@@ -89,6 +89,7 @@ Configuramos los archivos _odbc.ini_ y _odbcinst.ini_
    CPReuse		=
 }}}
 
+En caso de querer usar un pool de conexiones ver^[6]^
 
 A continuación testeamos que drivers están definidos
 
@@ -132,6 +133,7 @@ SQL>
 
 [5] [http://www.iodbc.org/]
 
+[6] [http://www.unixodbc.org/doc/conn_pool.html]
 
 
 

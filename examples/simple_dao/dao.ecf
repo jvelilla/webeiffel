@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><system xmlns="http://www.eiffel.com/developers/xml/configuration-1-0-0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.eiffel.com/developers/xml/configuration-1-0-0 http://www.eiffel.com/developers/xml/configuration-1-0-0.xsd" name="dao" uuid="2C64C593-56C8-4B06-BA4B-890FFD7DA39F">
+	<target name="dao">
+		<root class="APPLICATION" feature="make"/>
+		<option warning="true">
+			<assertions precondition="true" postcondition="false" check="false" invariant="false" loop="false"/>
+		</option>
+		<external_include location="$(ISE_EIFFEL)/library/store/dbms/rdbms/odbc/Clib"/>
+		<external_object location="$(ISE_EIFFEL)/library/store/spec/$(ISE_PLATFORM)/lib/libodbc.a -liodbc"/>
+		<precompile name="base_pre" location="$ISE_PRECOMP\base.ecf"/>
+		<library name="base" location="$ISE_LIBRARY\library\base\base.ecf"/>
+		<library name="odbc" location="$ISE_LIBRARY\library\store\dbms\rdbms\odbc\odbc.ecf"/>
+		<library name="store" location="$ISE_LIBRARY\library\store\store.ecf">
+			<option warning="false">
+			</option>
+		</library>
+		<library name="time" location="$ISE_LIBRARY\library\time\time.ecf"/>
+		<cluster name="dao" location=".\">
+			<file_rule>
+				<exclude>EIFGENs</exclude>
+				<exclude>.svn</exclude>
+			</file_rule>
+			<cluster name="domain" location="\home\jvelilla\work\projects\dao\domain\"/>
+			<cluster name="persistence" location="\home\jvelilla\work\projects\dao\persistence\"/>
+		</cluster>
+	</target>
+</system>

@@ -1,3 +1,4 @@
+#labels Featured,Phase-Design,Phase-Requirements,Phase-Implementation
 = Simple Ejemplo de Acceso a Bases de Datos =
 
 Este ejemplo esta basado en el código de Origo project ^[1]^.

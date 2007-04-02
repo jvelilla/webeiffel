@@ -1,0 +1,16 @@
+= Simple Ejemplo de Acceso a Bases de Datos =
+
+Este ejemmple esta basado en el código de Origo project.
+El ejemplo usa EiffelStore, MySQL, ODBC y UNIXODBC (ver)
+
+== Diseño ==
+Uml
+http://farm1.static.flickr.com/243/443796213_79a10f4e0f_b.jpg
+
+
+== Código ==
+http://webeiffel.googlecode.com/svn/trunk/examples/simple_dao/
+
+
+== Referencias ==
+[TBC]

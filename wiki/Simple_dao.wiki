@@ -4,7 +4,7 @@ Este ejemplo esta basado en el código de Origo project ^[1]^.
 El ejemplo usa EiffelStore, MySQL, ODBC y UNIXODBC ^[2,3]^ 
 
 == Diseño ==
-Uml
+U
 http://farm1.static.flickr.com/243/443796213_79a10f4e0f_b.jpg
 
 

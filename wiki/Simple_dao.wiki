@@ -18,7 +18,11 @@ http://webeiffel.googlecode.com/svn/trunk/examples/simple_dao/
 
 == Referencias ==
 [1] http://origo.ethz.ch/index.php/Single_Sign-On
+
 [2] http://code.google.com/p/webeiffel/wiki/Eiffel_Database
+
 [3] http://code.google.com/p/webeiffel/wiki/LinuxODBC
+
 [4] http://safe.sourceforge.net/
+
 [TBC]

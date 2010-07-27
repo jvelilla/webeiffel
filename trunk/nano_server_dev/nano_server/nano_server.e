@@ -136,34 +136,49 @@ feature {NONE} -- Implementation
 			socket_attached: client_socket /= Void
 			socket_valid: client_socket.is_open_write
 			message_attached: message /= Void
+		local
+			l_response : HTTP_RESPONSE
 		do
-			client_socket.put_string (message + "%N")
+			create l_response.make
+			l_response.set_reply_text (message)
+			send_message (client_socket, l_response.reply_header + l_response.reply_text)
 		end
 
 
-	receive_message_internal (client_socket: NETWORK_STREAM_SOCKET) : STRING
+
+	receive_message_internal (socket: NETWORK_STREAM_SOCKET) : STRING
         require
-            client_socket: client_socket /= Void and then not client_socket.is_closed
+            socket: socket /= Void and then not socket.is_closed
         local
         	end_of_stream : BOOLEAN
         do
 
             from
-                client_socket.read_line
+                socket.read_line
                 Result := ""
             until
                 end_of_stream
             loop
-                print ("%N" +client_socket.last_string+ "%N")
-                Result.append(client_socket.last_string)
-                if client_socket.last_string = void or client_socket.last_string.is_equal ("%R") or client_socket.last_character.is_equal ('%N')  then
-                	end_of_stream := true
-                else
-                	client_socket.read_line
+                print ("%N" +socket.last_string+ "%N")
+                Result.append(socket.last_string)
+                if not socket.last_string.is_equal("%R") and socket.socket_ok  then
+                	socket.read_line
+        		else
+        			end_of_stream := True
         		end
         	end
-        rescue
-       		print ("NANO server shutdown due to exception. Please relaunch manually.")
-       		Result :=  Void
 		end
+
+	send_message (client_socket : NETWORK_STREAM_SOCKET ; a_msg: STRING)
+		local
+			a_package : PACKET
+            a_data : MANAGED_POINTER
+            c_string : C_STRING
+		do
+			 create c_string.make (a_msg)
+             create a_data.make_from_pointer (c_string.item, a_msg.count + 1)
+             create a_package.make_from_managed_pointer (a_data)
+             client_socket.send (a_package, 1)
+		end
+
 end

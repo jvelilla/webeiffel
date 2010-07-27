@@ -100,7 +100,7 @@ feature -- Implementation
 			valid_socket: a_socket /= Void and then a_socket.is_open_write
 			valid_message: message /= Void and then not message.is_empty
 		do
-			a_socket.put_string (message + "%N")
+			a_socket.put_string (message + "%/13/%/10/%/13/%/10/")
 		end
 
 	send_message2 (a_socket: SOCKET; message: STRING)

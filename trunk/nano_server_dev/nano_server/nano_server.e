@@ -26,7 +26,7 @@ feature {NONE} -- Initialization
 			port := 9090
 
 
-			io.put_string ("starting echo_server")
+			io.put_string ("starting nano_server")
 			io.put_string (" port = ")
 			io.put_integer (port)
 			io.put_new_line
@@ -138,9 +138,16 @@ feature {NONE} -- Implementation
 			message_attached: message /= Void
 		local
 			l_response : HTTP_RESPONSE
+			l_body : STRING
 		do
+			l_body := "Hello from NANO SERVER";
+
 			create l_response.make
-			l_response.set_reply_text (message)
+			l_response.set_content_length (l_body.count.out)
+			io.put_string ("SERVER HEADER Says :")
+			io.put_string (l_response.reply_header)
+			io.put_new_line
+			l_response.set_reply_text (l_body)
 			send_message (client_socket, l_response.reply_header + l_response.reply_text)
 		end
 
@@ -178,7 +185,7 @@ feature {NONE} -- Implementation
 			 create c_string.make (a_msg)
              create a_data.make_from_pointer (c_string.item, a_msg.count + 1)
              create a_package.make_from_managed_pointer (a_data)
-             client_socket.send (a_package, 1)
+             client_socket.send (a_package, 0)
 		end
 
 end

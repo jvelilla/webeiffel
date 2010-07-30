@@ -51,6 +51,12 @@ feature {NONE} -- Initialization
 			listen_socket.close
 			io.put_string ("finish echo_server%N")
 		end
+feature -- Access
+	method 	: STRING
+	uri    	: STRING
+	version : STRING
+	request_header_map : HASH_TABLE [STRING,STRING]
+			-- Containts key value of the header
 
 feature {NONE} -- Implementation
 
@@ -97,6 +103,7 @@ feature {NONE} -- Implementation
 			io.put_new_line
 			io.put_string ("%T Accepted client address = " + l_peer_address.host_address.host_address + " , port = " + l_peer_address.port.out)
 			io.put_new_line
+			create request_header_map.make (20)
 			from
 				done := False
 			until
@@ -104,6 +111,7 @@ feature {NONE} -- Implementation
 			loop
 				if socket.socket_ok then
 					done := receive_message_and_send_replay (socket)
+					request_header_map.wipe_out
 				else
 					done := True
 				end
@@ -158,15 +166,21 @@ feature {NONE} -- Implementation
             socket: socket /= Void and then not socket.is_closed
         local
         	end_of_stream : BOOLEAN
+        	pos : INTEGER
+        	line : STRING
         do
-
+        	socket.read_line
+			parse_request_line (socket.last_string)
             from
                 socket.read_line
                 Result := ""
             until
                 end_of_stream
             loop
-                print ("%N" +socket.last_string+ "%N")
+                line := socket.last_string
+                print ("%N" +line+ "%N")
+                pos := line.index_of(':',1)
+               	request_header_map.put (line.substring (pos + 1, line.count), line.substring (1,pos-1))
                 Result.append(socket.last_string)
                 if not socket.last_string.is_equal("%R") and socket.socket_ok  then
                 	socket.read_line
@@ -186,6 +200,23 @@ feature {NONE} -- Implementation
              create a_data.make_from_pointer (c_string.item, a_msg.count + 1)
              create a_package.make_from_managed_pointer (a_data)
              client_socket.send (a_package, 0)
+		end
+
+
+	parse_request_line (line: STRING)
+		require
+			line /= Void
+		local
+			pos, next_pos: INTEGER
+		do
+			print ("%N parse request line:%N" + line)
+			pos := line.index_of (' ', 1)
+			method := line.substring (1, pos - 1)
+			next_pos := line.index_of (' ', pos+1)
+			uri := line.substring (pos+1, next_pos-1)
+			version := line.substring (next_pos + 1, line.count)
+		ensure
+			not_void_method: method /= Void
 		end
 
 end

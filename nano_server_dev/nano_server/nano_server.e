@@ -25,7 +25,6 @@ feature {NONE} -- Initialization
 		do
 			port := 9090
 
-
 			io.put_string ("starting nano_server")
 			io.put_string (" port = ")
 			io.put_integer (port)

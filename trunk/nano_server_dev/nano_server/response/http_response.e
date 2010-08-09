@@ -14,14 +14,14 @@ feature -- response header fields
 	status_code: STRING
 			-- status
 
-	content_length : STRING
+	content_length_data : STRING
 			-- length		
 
 	set_content_length (new_content_length: STRING) is
 		require
 			not_void: new_content_length /= Void
 		do
-			content_length := new_content_length
+			content_length_data := new_content_length
 		end
 
 	set_status_code (new_status_code: STRING) is
@@ -41,14 +41,14 @@ feature -- response header fields
 			reason_phrase := new_reason_phrase
 		end
 
-	content_type: STRING
+	content_type_data: STRING
 			-- type of content in this reply (eg. text/html)
 
 	set_content_type (new_content_type: STRING) is
 		require
 			not_void: new_content_type /= Void
 		do
-			content_type := new_content_type
+			content_type_data := new_content_type
 		end
 
 feature -- creation
@@ -58,7 +58,7 @@ feature -- creation
 			-- set default values for the reply
 			status_code := ok
 			reason_phrase := ok_message
-			content_type := text_html
+			content_type_data := text_html
 		end
 
 feature -- access these to send a reply

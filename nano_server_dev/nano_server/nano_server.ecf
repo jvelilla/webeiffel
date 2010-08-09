@@ -14,6 +14,12 @@
 				<exclude>/EIFGENs$</exclude>
 				<exclude>/.svn$</exclude>
 			</file_rule>
+			<file_rule>
+				<exclude>^/request$</exclude>
+				<exclude>^/response$</exclude>
+			</file_rule>
+			<cluster name="request" location=".\request\" recursive="true"/>
+			<cluster name="response" location=".\response\" recursive="true"/>
 		</cluster>
 	</target>
 </system>

@@ -1,9 +1,3 @@
-indexing
-
-	description: "Handle a GET request"
-	date: "11/9/98"
-	author: "Copyright (c) Richie Bielak"
-
 class GET_REQUEST_HANDLER
 
 inherit
@@ -52,8 +46,9 @@ feature
 			else
 				answer.set_status_code (not_found)
 				answer.set_reason_phrase (not_found_message)
-				answer.set_reply_text ("Not found on this server%N%R")
+				answer.set_reply_text ("Not found on this server")
 			end
+			answer.set_content_length (answer.reply_text.count.out)
 		end
 
 	process_default is
@@ -62,10 +57,10 @@ feature
 				html : STRING
 			do
   			 answer.set_reply_text ("")
-			 html := " <html> <head> <title> Micro HTTPD </title> " +
+			 html := " <html> <head> <title> NANO HTTPD </title> " +
 				"	    </head>   " +
 				"       <body>    " +
-				" 		<h1> Welcome to Micro HTTPD! </h1> "+
+				" 		<h1> Welcome to NANO HTTPD! </h1> "+
 				" <p>  Default page  " +
 
 				" </p> " +

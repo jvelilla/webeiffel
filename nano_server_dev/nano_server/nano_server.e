@@ -10,6 +10,8 @@ inherit
 
 	INET_PROPERTIES
 
+	SHARED_DOCUMENT_ROOT
+
 create
 	make
 
@@ -29,6 +31,10 @@ feature {NONE} -- Initialization
 			io.put_string (" port = ")
 			io.put_integer (port)
 			io.put_new_line
+			io.put_string ("%NDocument Root:" + document_root +"%N")
+			document_root_cell.put (document_root)
+
+
 
 				-- Create the Server socket
 			create listen_socket.make_server_by_port (port)
@@ -51,6 +57,8 @@ feature {NONE} -- Initialization
 			io.put_string ("finish echo_server%N")
 		end
 
+
+	document_root: STRING is "./webroot"
 
 feature {NONE} -- Implementation
 

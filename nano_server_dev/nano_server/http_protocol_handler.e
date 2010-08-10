@@ -86,10 +86,15 @@ feature -- Implementation
 			socket_valid: client_socket.is_open_read and then client_socket.is_open_write
 		local
 			message: detachable STRING
+			l_http_request : HTTP_REQUEST_HANDLER
 		do
 			parse_request_line (client_socket)
             message := receive_message_internal (client_socket)
 			if method.is_equal (Get) then
+				create {GET_REQUEST_HANDLER} l_http_request
+				l_http_request.set_uri (uri)
+				l_http_request.process
+				send_message (client_socket, l_http_request.answer.reply_header + l_http_request.answer.reply_text)
 			elseif method.is_equal (Post) then
 			elseif method.is_equal (Put) then
 			elseif method.is_equal (Options) then
@@ -102,16 +107,6 @@ feature -- Implementation
 					print ("Method not supported")
 				end
 			end
-
-			if message /= Void  then
-				io.put_string ("Client Says :")
-				io.put_string (message)
-				io.put_new_line
-				send_reply (client_socket, message)
-			else
-				Result := True
-			end
-
 		end
 
 	send_reply (client_socket: NETWORK_STREAM_SOCKET; message: STRING)

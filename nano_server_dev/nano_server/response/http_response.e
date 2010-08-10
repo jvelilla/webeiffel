@@ -74,10 +74,10 @@ feature -- access these to send a reply
 			Result.append (reason_phrase)
 			Result.append (crlf)
 			Result.append ("Content-type: ")
-			Result.append (content_type)
+			Result.append (content_type_data)
 			Result.append (crlf)
 			Result.append ("Content-Length: ")
-			Result.append (content_length)
+			Result.append (content_length_data)
 			Result.append (crlf)
 			Result.append (crlf)
 			-- TODO: could add the size of data being sent here and

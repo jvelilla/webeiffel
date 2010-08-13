@@ -13,7 +13,7 @@ inherit
 feature
 
 
-	process is
+	process_2 is
 			-- process the request and create an answer
 		local
 			fname: STRING
@@ -47,6 +47,48 @@ feature
 				answer.set_status_code (not_found)
 				answer.set_reason_phrase (not_found_message)
 				answer.set_reply_text ("Not found on this server")
+			end
+			answer.set_content_length (answer.reply_text.count.out)
+		end
+
+	process
+			-- process the request and create an answer
+		local
+			fname: STRING
+			f: RAW_FILE
+			ctype, extension: STRING
+		do
+			create answer.make
+			if request_uri.is_equal ("/") then
+				process_default
+				answer.set_content_type ("text/html")
+			else
+				fname := document_root_cell.item.twin
+				fname.append (request_uri)
+				debug
+					print ("URI name: " + fname )
+				end
+				create f.make (fname)
+				create answer.make
+				if f.exists then
+					extension := ct_table.extension (request_uri)
+					ctype := ct_table.content_types.item (extension)
+					if ctype = Void then
+							process_raw_file (f)
+							answer.set_content_type ("text/html")
+					else
+						if ctype.is_equal ("text/html") then
+								process_text_file (f)
+							else
+								process_raw_file (f)
+							end
+							answer.set_content_type (ctype)
+						end
+					else
+						answer.set_status_code (not_found)
+						answer.set_reason_phrase (not_found_message)
+						answer.set_reply_text ("Not found on this server")
+					end
 			end
 			answer.set_content_length (answer.reply_text.count.out)
 		end

@@ -6,7 +6,8 @@ note
 
 class
 	HTTP_SERVER
-
+	inherit
+		SHARED_DOCUMENT_ROOT
 create
 	make
 feature -- Initialization
@@ -22,6 +23,7 @@ feature -- Initialization
 			print("%N%N%N")
 			print ("Starting Web Application Server:%N")
 			stop := False
+			document_root_cell.put (document_root)
 			create l_http_handler.make (current,"HTTP_HANDLER")
 			l_http_handler.launch
 			run
@@ -36,6 +38,7 @@ feature	-- Access
 	stop: BOOLEAN
 		-- Stops the server
 
+	document_root: STRING = "./webroot"
 
 feature {NONE} -- implementation
 

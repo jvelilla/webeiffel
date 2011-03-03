@@ -1,9 +1,7 @@
 deferred class HTTP_REQUEST_HANDLER
-
-
 feature
 
-	set_uri (new_uri: STRING) is
+	set_uri (new_uri: STRING)
 			-- set new URI
 		require
 			valid_uri: new_uri /= Void
@@ -14,7 +12,7 @@ feature
 	request_uri: STRING
 			-- requested url
 
-	set_data (new_data: STRING) is
+	set_data (new_data: STRING)
 			-- set new data
 		do
 			data := new_data
@@ -23,7 +21,18 @@ feature
 	data: STRING
 			-- the entire request message
 
-	process is
+
+	headers : HASH_TABLE [STRING, STRING]
+		-- Provides access to the request's HTTP headers, for example:
+		-- headers["Content-Type"] is "text/plain"
+
+
+	set_headers ( a_header : HASH_TABLE [STRING, STRING] )
+		do
+			headers := a_header
+		end
+
+	process
 			-- process the request and create an answer
 		require
 			valid_uri: request_uri /= Void
@@ -33,7 +42,7 @@ feature
 	answer: HTTP_RESPONSE
 			-- reply to this request
 
-	reset is
+	reset
 			-- reinit the fields
 		do
 			request_uri := Void

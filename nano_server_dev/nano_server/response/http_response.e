@@ -5,7 +5,7 @@ inherit
 
 	HTTP_CONSTANTS
 
-creation
+create
 
 	make
 
@@ -17,14 +17,14 @@ feature -- response header fields
 	content_length_data : STRING
 			-- length		
 
-	set_content_length (new_content_length: STRING) is
+	set_content_length (new_content_length: STRING)
 		require
 			not_void: new_content_length /= Void
 		do
 			content_length_data := new_content_length
 		end
 
-	set_status_code (new_status_code: STRING) is
+	set_status_code (new_status_code: STRING)
 		require
 			not_void: new_status_code /= Void
 		do
@@ -34,7 +34,7 @@ feature -- response header fields
 	reason_phrase: STRING
 			-- message, if any
 
-	set_reason_phrase (new_reason_phrase: STRING) is
+	set_reason_phrase (new_reason_phrase: STRING)
 		require
 			not_void: new_reason_phrase /= Void
 		do
@@ -44,7 +44,7 @@ feature -- response header fields
 	content_type_data: STRING
 			-- type of content in this reply (eg. text/html)
 
-	set_content_type (new_content_type: STRING) is
+	set_content_type (new_content_type: STRING)
 		require
 			not_void: new_content_type /= Void
 		do
@@ -53,7 +53,7 @@ feature -- response header fields
 
 feature -- creation
 
-	make is
+	make
 		do
 			-- set default values for the reply
 			status_code := ok
@@ -64,19 +64,21 @@ feature -- creation
 feature -- access these to send a reply
 
 
-	reply_header: STRING is
+	reply_header: STRING
 			-- header
 		do
-			Result := clone (http_version_1_1)
+			Result := http_version_1_1.twin
 			Result.extend (' ')
 			Result.append (status_code)
 			Result.extend (' ')
 			Result.append (reason_phrase)
 			Result.append (crlf)
-			Result.append ("Content-type: ")
+			Result.append (Server_datails)
+			Result.append (crlf)
+			Result.append (Content_type + ": ")
 			Result.append (content_type_data)
 			Result.append (crlf)
-			Result.append ("Content-Length: ")
+			Result.append (Content_length + ": ")
 			Result.append (content_length_data)
 			Result.append (crlf)
 			Result.append (crlf)
@@ -84,10 +86,10 @@ feature -- access these to send a reply
 			-- then keep the connection alive
 		end
 
-	reply_header_continue: STRING is
+	reply_header_continue: STRING
 			-- header
 		do
-			Result := clone (http_version_1_1)
+			Result :=http_version_1_1.twin
 			Result.extend (' ')
 			Result.append (status_code)
 			Result.extend (' ')
@@ -102,13 +104,13 @@ feature -- access these to send a reply
 	reply_text: STRING
 			-- reply text
 
-	set_reply_text (new_text: STRING) is
+	set_reply_text (new_text: STRING)
 			-- text could be Void
 		do
 			reply_text := new_text
 		end
 
-	append_reply_text (more_text: STRING) is
+	append_reply_text (more_text: STRING)
 			-- add more text to the reply
 		require
 			reply_text /= Void

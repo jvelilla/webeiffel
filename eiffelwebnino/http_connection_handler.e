@@ -26,15 +26,15 @@ feature {NONE} -- Initialization
 			a_name_attached: a_name /= Void
 		do
 			main_server := a_main_server
-	       	create current_request_message.make_empty
-	       	create method.make_empty
+			create current_request_message.make_empty
+			create method.make_empty
 			create uri.make_empty
 			create request_header_map.make (10)
-            is_stop_requested := False
-         ensure
-           main_server_set: a_main_server ~ main_server
-           current_request_message_attached: current_request_message /= Void
-   	end
+			is_stop_requested := False
+		ensure
+			main_server_set: a_main_server ~ main_server
+			current_request_message_attached: current_request_message /= Void
+		end
 
 feature -- Inherited Features
 
@@ -50,40 +50,40 @@ feature -- Inherited Features
 				print ("Socket could not be bound on port " + {HTTP_CONSTANTS}.Http_server_port.out )
 			else
 				from
-	                l_http_socket.listen ({HTTP_CONSTANTS}.Max_tcp_clients)
-	               print ("%NHTTP Connection Server ready on port " + {HTTP_CONSTANTS}.Http_server_port.out +"%N")
-	            until
-	            	is_stop_requested
-	            loop
-	                l_http_socket.accept
-	                if not is_stop_requested then
-			            if attached l_http_socket.accepted as l_thread_http_socket then
+					l_http_socket.listen ({HTTP_CONSTANTS}.Max_tcp_clients)
+					print ("%NHTTP Connection Server ready on port " + {HTTP_CONSTANTS}.Http_server_port.out +"%N")
+				until
+					is_stop_requested
+				loop
+					l_http_socket.accept
+					if not is_stop_requested then
+						if attached l_http_socket.accepted as l_thread_http_socket then
 							receive_message_and_send_replay (l_thread_http_socket)
-			            	l_thread_http_socket.cleanup
-				            check
-				            	socket_closed: l_thread_http_socket.is_closed
-				            end
+							l_thread_http_socket.cleanup
+							check
+								socket_closed: l_thread_http_socket.is_closed
+							end
 						end
 					end
-	            end
-	            l_http_socket.cleanup
-	        	check
-	        		socket_is_closed: l_http_socket.is_closed
-	       		end
-       		end
-       		print ("HTTP Connection Server ends.")
-       	rescue
-       		print ("HTTP Connection Server shutdown due to exception. Please relaunch manually.")
+				end
+				l_http_socket.cleanup
+				check
+					socket_is_closed: l_http_socket.is_closed
+				end
+			end
+			print ("HTTP Connection Server ends.")
+		rescue
+			print ("HTTP Connection Server shutdown due to exception. Please relaunch manually.")
 
 			if attached l_http_socket as ll_http_socket then
 				ll_http_socket.cleanup
 				check
-	        		socket_is_closed: ll_http_socket.is_closed
-	       		end
+					socket_is_closed: ll_http_socket.is_closed
+				end
 			end
 			is_stop_requested := True
-	    	retry
-       	end
+			retry
+		end
 
 feature -- Access
 

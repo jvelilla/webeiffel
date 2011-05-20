@@ -10,7 +10,7 @@ feature
 
 	document_root_cell: CELL [STRING]
 		once ("PROCESS")
-        	create Result.put (Void)
+			create Result.put (Void)
 		end
 
 end

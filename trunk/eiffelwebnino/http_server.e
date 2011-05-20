@@ -6,8 +6,8 @@ note
 
 class
 	HTTP_SERVER
-	inherit
-		SHARED_DOCUMENT_ROOT
+inherit
+	SHARED_DOCUMENT_ROOT
 create
 	make
 feature -- Initialization
@@ -43,7 +43,7 @@ feature	-- Access
 feature {NONE} -- implementation
 
 	run
-			-- Start the server
+		-- Start the server
 		local
 			l_thread: EXECUTION_ENVIRONMENT
 		do
